@@ -1,0 +1,4 @@
+#!/bin/sh
+# Abre kitty con paru y refresca el contador de la barra al cerrar.
+kitty --title "Actualizaciones" sh -c 'paru; echo; read -p "Pulsa Enter para cerrar..." _'
+qs -c noctalia-shell ipc call cb refresh updates >/dev/null 2>&1

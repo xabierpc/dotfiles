@@ -1,0 +1,5 @@
+#!/bin/sh
+# Cuenta paquetes pendientes (repos + AUR) para la barra de Noctalia.
+repo=$(timeout 60 checkupdates 2>/dev/null | wc -l)
+aur=$(timeout 60 paru -Qua 2>/dev/null | wc -l)
+echo $((repo + aur))
