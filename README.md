@@ -3,7 +3,7 @@
 Configuración de Hyprland (Lua) y noctalia-shell en CachyOS.
 
 - `.config/hypr` — Hyprland
-- `.config/noctalia` — barra/shell (noctalia v5: `config.toml` + `palettes/`; `settings.json` es de la v4)
+- `.config/noctalia` — barra/shell (noctalia v5: `config.toml` + `palettes/`)
 - `.local/bin/updates-*` — scripts usados por la barra
 
 ## Instalar
