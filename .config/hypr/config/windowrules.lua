@@ -70,10 +70,11 @@ hl.window_rule({
     },
     float = true,
     move = {
-        "max(0, min(cursor_x - 650, monitor_w - 1320))",
-        "max(0, min(cursor_y - 50, monitor_h - 820))"
+        "max(0, min(cursor_x - (monitor_w*0.35), monitor_w*0.29))",
+        "max(0, min(cursor_y - 50, monitor_h*0.19))"
     },
-    size = "1300 800",
+    -- Tamaño relativo: con escala 1.5 la pantalla lógica es solo 1280x800
+    size = "(monitor_w*0.70) (monitor_h*0.80)",
 })
 
 -- Opacity Overrides

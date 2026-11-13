@@ -1,0 +1,117 @@
+# Configuración v5 migrada desde la v4 (settings.json)
+
+[bar.default]
+position = "top"
+background_opacity = 0.93
+capsule = true
+concave_edge_corners = true
+margin_edge = 4
+margin_ends = 4
+radius = 12
+radius_top_left = 12
+radius_top_right = 12
+radius_bottom_left = 12
+radius_bottom_right = 12
+widget_spacing = 6
+show_on_workspace_switch = true
+start = [ "launcher", "clock", "cpu", "temp", "ram", "active_window", "media" ]
+center = [ "workspaces" ]
+end = [ "updates", "tray", "notifications", "battery", "volume", "brightness", "control-center" ]
+
+[widget.launcher]
+glyph = "rocket"
+
+[widget.clock]
+format = "{:%H:%M %a, %b %d}"
+
+[widget.cpu]
+type = "sysmon"
+stat = "cpu_usage"
+
+[widget.temp]
+type = "sysmon"
+stat = "cpu_temp"
+
+[widget.ram]
+type = "sysmon"
+stat = "ram_used"
+
+[widget.active_window]
+max_length = 145.0
+title_scroll = "on_hover"
+
+[widget.media]
+max_length = 145.0
+title_scroll = "on_hover"
+hide_when_no_media = true
+
+[widget.updates]
+type = "custom_button"
+glyph = "package"
+tooltip = "Paquetes por actualizar (clic: paru)"
+
+    [widget.updates.actions]
+    left = "exec $HOME/.local/bin/updates-run"
+
+[theme]
+mode = "dark"
+source = "custom"
+custom_palette = "Peach Tree"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "kitty", "qt", "kcolorscheme" ]
+
+[wallpaper]
+directory = "/home/xabierpc/Imágenes/Wallpapers"
+fill_mode = "crop"
+transition_duration = 1500.0
+
+    [wallpaper.default]
+    path = "/home/xabierpc/Imágenes/Wallpapers/peach-tree-4k.jpg"
+
+[shell]
+font_family = "DejaVu LGC Sans"
+avatar_path = "/home/xabierpc/.face"
+polkit_agent = true
+launch_apps_as_systemd_services = true
+time_format = "{:%H:%M}"
+
+    [shell.panel]
+    open_near_click_control_center = true
+    session_placement = "floating"
+    session_position = "center"
+
+[dock]
+enabled = true
+auto_hide = true
+reserve_space = false
+position = "bottom"
+
+[notification]
+position = "top_right"
+
+[osd]
+position = "top_right"
+hide_delay_ms = 2000
+
+[audio]
+enable_volume_sounds = false
+enable_notification_sounds = false
+
+[idle]
+behavior_order = [ "screen-off", "lock", "lock-and-suspend" ]
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 300.0
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 1800.0
